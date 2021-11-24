@@ -1,0 +1,26 @@
+{
+  "name": "gestiondeproyectos",
+  "version": "1.0.0",
+  "description": "Trabajo final del ciclo 4 de Misión TIC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanDevop/Gestion-Proyectos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanDevop/Gestion-Proyectos/issues"
+  },
+  "homepage": "https://github.com/JuanDevop/Gestion-Proyectos#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.13",
+    "mongoose-unique-validator": "^3.0.0"
+  }
+}
