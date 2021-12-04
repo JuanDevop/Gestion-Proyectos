@@ -15,4 +15,4 @@ import { Schema, model } from "mongoose"
    descripcion: {type:String},
  }) 
 
- export default model('Registro', datosRegistro )
+ export default model('usuarios', datosRegistro )
