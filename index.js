@@ -1,8 +1,18 @@
+import dotenv from 'dotenv'
+
 var express = require("express"),
   app = express(),
   bodyParser = require("body-parser"),
-  methodOverride = require("method-override");
-mongoose = require("mongoose");
+  methodOverride = require("method-override"),
+  http = require('http'),
+  server = http.createServer(app),
+  mongoose = require("mongoose");
+
+
+dotenv.config({path: './.env'})
+
+const port = process.env.PORT;
+const stringConexion = process.env.DATABASE_URL;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,6 +26,16 @@ router.get("/", function (req, res) {
 
 app.use(router);
 
-app.listen(3000, function () {
-  console.log("Node server running on http://localhost:3000");
-});
+mongoose.connect(stringConexion,(err, res)=>{
+  if(err){
+    console.log("ERROR: Conectando a la base de Datos"+ err)
+  }
+  app.listen(port, function () {
+    console.log("Node server running on http://localhost:3000");
+  });
+})
+
+
+
+
+

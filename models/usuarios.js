@@ -10,7 +10,7 @@ var uniqueValidator = require ("mongoose-unique-validator")
    contraseña: {type:String},
    rol: {type:String, enum:["Estudiante", "Lider", "Administrador"]},
    estado: {type:String, enum:["Pendiente", "Autorizado"]},
-
+   proyectos: {type:Array}
  }) 
 
  module.exports = mongoose.model('Registro', datosRegistro)

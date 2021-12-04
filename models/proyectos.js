@@ -13,7 +13,8 @@ var uniqueValidator = require ("mongoose-unique-validator")
    presupuesto: {type:Number},
    fechainicio: {type:Date},
    fechafin: {type:Date},
-   estudiantes: {type:Object}
+   estudiantes: {type:Array},
+   avances: {type: Array}
 
  }) 
 
