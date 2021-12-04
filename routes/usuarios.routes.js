@@ -5,6 +5,9 @@ const router = Router();
 
 router.post('/', controladorUsuarios.createUsuario)
 
+router.get('/', controladorUsuarios.getUsuarios)
+
+router.get('/', controladorUsuarios.getUsuarioById)
 
 
 
