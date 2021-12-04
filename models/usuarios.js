@@ -1,6 +1,4 @@
-var mongoose = require("mongoose"),
-  Schema = mongoose.Schema;
-var uniqueValidator = require ("mongoose-unique-validator")
+import { Schema, model } from "mongoose"
 
  var datosRegistro = new Schema ({
    nombres: {type:String},
@@ -10,7 +8,11 @@ var uniqueValidator = require ("mongoose-unique-validator")
    contraseña: {type:String},
    rol: {type:String, enum:["Estudiante", "Lider", "Administrador"]},
    estado: {type:String, enum:["Pendiente", "Autorizado"]},
-   proyectos: {type:Array}
+   proyectos: {type:Array},
+   celular: {type:String},
+   direccion: {type:String},
+   ciudad: {type:String},
+   descripcion: {type:String},
  }) 
 
- module.exports = mongoose.model('Registro', datosRegistro)
+ export default model('Registro', datosRegistro )
